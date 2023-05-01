@@ -13,6 +13,7 @@ class ContentModel: ObservableObject {
     
     var styleData: Data?
     
+    
     init() {
         
         getLocalData()
