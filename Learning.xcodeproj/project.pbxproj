@@ -21,6 +21,7 @@
 		C82652C22A00581F00D81066 /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82652C12A00581F00D81066 /* ContentDetailView.swift */; };
 		C82652C52A005D0C00D81066 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C82652C42A005D0C00D81066 /* AVKit.framework */; };
 		C82652C72A005F2600D81066 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82652C62A005F2600D81066 /* Constants.swift */; };
+		C8FD6F902A016C210088ACFF /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FD6F8F2A016C210088ACFF /* CodeTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		C82652C12A00581F00D81066 /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 		C82652C42A005D0C00D81066 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		C82652C62A005F2600D81066 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C8FD6F8F2A016C210088ACFF /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				C82652BD2A0008F700D81066 /* ContentView.swift */,
 				C82652BF2A0019B800D81066 /* ContentViewRow.swift */,
 				C82652C12A00581F00D81066 /* ContentDetailView.swift */,
+				C8FD6F8F2A016C210088ACFF /* CodeTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				C82652C22A00581F00D81066 /* ContentDetailView.swift in Sources */,
 				C82652A129FD7C4300D81066 /* LearningApp.swift in Sources */,
 				C82652C02A0019B800D81066 /* ContentViewRow.swift in Sources */,
+				C8FD6F902A016C210088ACFF /* CodeTextView.swift in Sources */,
 				C82652B429FD7DC100D81066 /* ContentModel.swift in Sources */,
 				C82652BA29FDC22100D81066 /* Models.swift in Sources */,
 				C82652C72A005F2600D81066 /* Constants.swift in Sources */,

@@ -16,9 +16,13 @@ class ContentModel: ObservableObject {
     @Published var currentModule: Module?
     var currentModuleIndex = 0
     
-    // Current Lesson
+    // Current lesson
     @Published var currentLesson: Lesson?
     var currentLessonIndex = 0
+    
+    // Current lesson explanation
+    @Published var lessonDescription = NSAttributedString()
+    var currentDescriptionIndex = 0
     
     var styleData: Data?
     
@@ -94,7 +98,7 @@ class ContentModel: ObservableObject {
     }
     
     func beginLesson(_ lessonIndex: Int) { // Seleciona dentro do modulo/nome a lesson atual
-         
+        
         // Check the lessons index is with range of module lesson
         
         if lessonIndex < currentModule!.content.lessons.count {
@@ -106,6 +110,7 @@ class ContentModel: ObservableObject {
         
         // Set current lesson
         currentLesson = currentModule!.content.lessons[currentLessonIndex] // Conforme o modulo selecionado anteriormente, seleciona a lesson
+        lessonDescription = addStyling(currentLesson!.explanation)
     }
     
     
@@ -119,6 +124,7 @@ class ContentModel: ObservableObject {
             
             // Set current lesson property
             currentLesson = currentModule!.content.lessons[currentLessonIndex]
+            lessonDescription = addStyling(currentLesson!.explanation)
         }
         else {
             // Reset the lesson state
@@ -132,5 +138,29 @@ class ContentModel: ObservableObject {
        
         return (currentLessonIndex + 1 < currentModule!.content.lessons.count)
         
+    }
+    
+    // MARK: - Code Styling
+    
+    private func addStyling(_ htmlString: String) -> NSAttributedString {
+        
+        var resultString = NSAttributedString()
+        var data = Data()
+        
+        // Add the styling data
+        if styleData != nil {
+            data.append(styleData!)
+        }
+        
+        // Add the html data
+        data.append(Data(htmlString.utf8))
+        
+        // Convert to attributed string
+        if let attributedString = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) {
+            
+            resultString = attributedString
+        }
+        
+        return resultString
     }
 }
