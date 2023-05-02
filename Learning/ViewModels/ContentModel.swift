@@ -22,10 +22,10 @@ class ContentModel: ObservableObject {
     
     // Current lesson explanation
     @Published var lessonDescription = NSAttributedString()
-    var currentDescriptionIndex = 0
-    
     var styleData: Data?
     
+    // Current selected content and test
+    @Published var currentContentSelected: Int?
     
     init() {
         
