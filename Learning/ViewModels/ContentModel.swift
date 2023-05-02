@@ -9,7 +9,16 @@ import Foundation
 
 class ContentModel: ObservableObject {
     
+    // List of modules
     @Published var modules = [Module]()
+    
+    // Current module
+    @Published var currentModule: Module?
+    var currentModuleIndex = 0
+    
+    // Current Lesson
+    @Published var currentLesson: Lesson?
+    var currentLessonIndex = 0
     
     var styleData: Data?
     
@@ -19,6 +28,8 @@ class ContentModel: ObservableObject {
         getLocalData()
         
     }
+    
+    // MARK: - Data methods
     
     func getLocalData() {
         
@@ -60,5 +71,66 @@ class ContentModel: ObservableObject {
             print("Couln`t parse style data")
             
         }
+    }
+    
+    // MARK: - Module navigation methods
+    
+    func beginModule(_ moduleid: Int) { // Seleciona dentro do json o modulo/nome do curso atual
+        
+        // Find the index for this module id
+        
+        for index in 0..<modules.count {
+            
+            if modules[index].id == moduleid {
+                
+                // Found the matching module
+                currentModuleIndex = index
+            }
+        }
+        
+        // Set the current module
+        
+        currentModule = modules[currentModuleIndex] // Verifica todos modulos, e salva os modulo atual selecionado
+    }
+    
+    func beginLesson(_ lessonIndex: Int) { // Seleciona dentro do modulo/nome a lesson atual
+         
+        // Check the lessons index is with range of module lesson
+        
+        if lessonIndex < currentModule!.content.lessons.count {
+            currentLessonIndex = lessonIndex
+        }
+        else {
+            currentLessonIndex = 0
+        }
+        
+        // Set current lesson
+        currentLesson = currentModule!.content.lessons[currentLessonIndex] // Conforme o modulo selecionado anteriormente, seleciona a lesson
+    }
+    
+    
+    func nextLesson() {
+        
+        // Advance a lesson
+        currentLessonIndex += 1
+        
+        // Check that it is with range
+        if currentLessonIndex < currentModule!.content.lessons.count {
+            
+            // Set current lesson property
+            currentLesson = currentModule!.content.lessons[currentLessonIndex]
+        }
+        else {
+            // Reset the lesson state
+            currentLessonIndex = 0
+            currentLesson = nil
+        }
+    }
+    
+    
+    func hasNextLesson() -> Bool {
+       
+        return (currentLessonIndex + 1 < currentModule!.content.lessons.count)
+        
     }
 }
