@@ -27,9 +27,7 @@ struct HomeView: View {
                         ForEach(model.modules) { module in
                             
                             VStack (spacing: 20) {
-                                
-                                
-                                
+                                                 
                                 NavigationLink(destination: ContentView()
                                     .onAppear(perform: {
                                         model.beginModule(module.id)
@@ -57,6 +55,7 @@ struct HomeView: View {
                                     EmptyView()
                                 }
                             }
+                            .padding(.bottom, 10)
                         }
                     }
                     .accentColor(.black)
