@@ -24,6 +24,7 @@
 		C8FD6F902A016C210088ACFF /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FD6F8F2A016C210088ACFF /* CodeTextView.swift */; };
 		C8FD6F922A01A5410088ACFF /* RectangleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FD6F912A01A5410088ACFF /* RectangleCard.swift */; };
 		C8FD6F942A01C4020088ACFF /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FD6F932A01C4020088ACFF /* TestView.swift */; };
+		C8FD6F962A03F1440088ACFF /* TestResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FD6F952A03F1440088ACFF /* TestResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		C8FD6F8F2A016C210088ACFF /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
 		C8FD6F912A01A5410088ACFF /* RectangleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCard.swift; sourceTree = "<group>"; };
 		C8FD6F932A01C4020088ACFF /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		C8FD6F952A03F1440088ACFF /* TestResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				C8FD6F932A01C4020088ACFF /* TestView.swift */,
 				C8FD6F8F2A016C210088ACFF /* CodeTextView.swift */,
 				C8FD6F912A01A5410088ACFF /* RectangleCard.swift */,
+				C8FD6F952A03F1440088ACFF /* TestResultView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8FD6F942A01C4020088ACFF /* TestView.swift in Sources */,
+				C8FD6F962A03F1440088ACFF /* TestResultView.swift in Sources */,
 				C82652A329FD7C4300D81066 /* HomeView.swift in Sources */,
 				C82652BC29FF3BE900D81066 /* HomeViewRow.swift in Sources */,
 				C82652BE2A0008F700D81066 /* ContentView.swift in Sources */,
