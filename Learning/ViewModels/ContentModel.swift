@@ -38,7 +38,7 @@ class ContentModel: ObservableObject {
         getLocalData()
         
         // Download remote json file and parse data
-        getRemoteData()
+        //getRemoteData()
         
     }
     

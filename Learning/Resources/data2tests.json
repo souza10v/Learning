@@ -1,0 +1,195 @@
+[{
+    "id": 1,
+    "category": "SwiftUI",
+    "test": {
+        "id": 0,
+        "image": "swiftUI",
+        "time": "30 minutes",
+        "description": "Test your knowledge of SwiftUI.",
+        "questions": [{
+            "id": 0,
+            "content": "<p>Every SwiftUI app has exactly one scene to which contains a view hierarchy.</p>",
+            "correctIndex": 1,
+            "answers": [
+                "true",
+                "false"
+            ]
+        },
+            {
+                "id": 1,
+                "content": "<p>How can you customize the display and behaviour of a view in SwiftUI?</p>",
+                "correctIndex": 2,
+                "answers": [
+                    "Change it in the storyboard",
+                    "Conform it to the appropriate delegate protocol",
+                    "Using modifiers",
+                    "You can't"
+                ]
+            },
+            {
+                "id": 2,
+                "content": "<p>Which of the following allows you to display a table?</p>",
+                "correctIndex": 3,
+                "answers": [
+                    "VStack",
+                    "HStack",
+                    "ZStack",
+                    "List"
+                ]
+            },
+            {
+                "id": 3,
+                "content": "<p>You can define custom paths to create shapes in SwiftUI.</p>",
+                "correctIndex": 0,
+                "answers": [
+                    "true",
+                    "false"
+                ]
+            },
+            {
+                "id": 4,
+                "content": "<p>Select the best answer.</p>",
+                "correctIndex": 3,
+                "answers": [
+                    "You can add SwiftUI views to a storyboard-based app using hosting controllers",
+                    "You can add UIKit views to a SwiftUI project using representable objects",
+                    "SwiftUI and UIKit are separate, and shouldn't be integrated",
+                    "Answers 1 and 2"
+                ]
+            },
+            {
+                "id": 5,
+                "content": "<p>In SwiftUI, interfaces are created:</p>",
+                "correctIndex": 2,
+                "answers": [
+                    "Procedurally",
+                    "Dynamically",
+                    "Declaratively",
+                    "Eccentrically"
+                ]
+            },
+            {
+                "id": 6,
+                "content": "<p>Prefixing a property wrapped property with $ will access its",
+                "correctIndex": 1,
+                "answers": [
+                    "Wrapped value",
+                    "Projected value",
+                    "Financial value",
+                    "That's invalid syntax"
+                ]
+            }
+        ]
+    }
+},
+    {
+        "id": 2,
+        "category": "History",
+        "test": {
+            "id": 0,
+            "image": "swiftUI",
+            "time": "60 minutes",
+            "description": "Test your knowledge of History.",
+            "questions": [
+                {
+                    "id": 1,
+                    "content": "<p>Which U.S. President is credited with ending segregation in the military?</p>",
+                    "correctIndex": 2,
+                    "answers": [
+                        "George Washington",
+                        "Thomas Jefferson",
+                        "Harry S. Truman",
+                        "John F. Kennedy"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "content": "<p>What was the name of the treaty that ended World War I?</p>",
+                    "correctIndex": 3,
+                    "answers": [
+                        "Treaty of Versailles",
+                        "Treaty of Tordesillas",
+                        "Treaty of Westphalia",
+                        "Treaty of Brest-Litovsk"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "content": "<p>Who was the first President of the United States?</p>",
+                    "correctIndex": 0,
+                    "answers": [
+                        "George Washington",
+                        "John Adams",
+                        "Thomas Jefferson",
+                        "Abraham Lincoln"
+                    ]
+                },
+                {
+                    "id": 4,
+                    "content": "<p>Which event marked the beginning of World War II?</p>",
+                    "correctIndex": 1,
+                    "answers": [
+                        "The sinking of the Lusitania",
+                        "The invasion of Poland",
+                        "The attack on Pearl Harbor",
+                        "The signing of the Munich Agreement"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "content": "<p>Who was the leader of the Soviet Union during World War II?</p>",
+                    "correctIndex": 1,
+                    "answers": [
+                        "Joseph Stalin",
+                        "Vladimir Lenin",
+                        "Mikhail Gorbachev",
+                        "Boris Yeltsin"
+                    ]
+                },
+                {
+                    "id": 6,
+                    "content": "<p>Who was the first African American to be elected President of the United States?</p>",
+                    "correctIndex": 3,
+                    "answers": [
+                        "Malcolm X",
+                        "Jesse Jackson",
+                        "Martin Luther King Jr.",
+                        "Barack Obama"
+                    ]
+                },
+                {
+                    "id": 7,
+                    "content": "<p>Which war was fought between North and South Korea in the early 1950s?</p>",
+                    "correctIndex": 2,
+                    "answers": [
+                        "World War I",
+                        "World War II",
+                        "Korean War",
+                        "Vietnam War"
+                    ]
+                },
+                {
+                    "id": 8,
+                    "content": "<p>Who was the first European explorer to reach India by sea?</p>",
+                    "correctIndex": 0,
+                    "answers": [
+                        "Vasco da Gama",
+                        "Christopher Columbus",
+                        "Ferdinand Magellan",
+                        "Juan Ponce de León"
+                    ]
+                },
+                {
+                    "id": 9,
+                    "content": "<p>What was the name of the first permanent English settlement in North America?</p>",
+                    "correctIndex": 1,
+                    "answers": [
+                        "Jamestown",
+                        "Plymouth",
+                        "Roanoke",
+                        "Boston"
+                    ]
+                }
+            ] 
+        }
+    }]

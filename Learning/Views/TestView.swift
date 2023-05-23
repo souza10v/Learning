@@ -47,6 +47,8 @@ struct TestView: View {
                                             
                                         } else {
                                             // Answer has been submitted
+                                            
+                                            // index == selectedAnswerIndex para entender quando eh clicado
                                             if index == model.currentQuestion!.correctIndex && index == selectedAnswerIndex {
                                                 
                                                 // User has selected right answer
