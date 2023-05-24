@@ -32,7 +32,7 @@ struct HomeView: View {
                                     .onAppear(perform: {
                                         model.beginModule(module.id)
                                     }),
-                                               tag: module.id,
+                                               tag: module.id.hash,
                                                selection: $model.currentContentSelected,
                                             label: {
                                     
@@ -44,7 +44,7 @@ struct HomeView: View {
                                     .onAppear(perform: {
                                         model.beginTest(module.id)
                                     }),
-                                               tag: module.id,
+                                               tag: module.id.hash,
                                                selection: $model.currentTestSelected,
                                                label: {
                                     // Test Card

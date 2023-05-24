@@ -76,7 +76,6 @@
 				F06ACA529AEC94FB0074BDA5 /* Pods-Learning.debug.xcconfig */,
 				18FB553E8A75804843F2B293 /* Pods-Learning.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
