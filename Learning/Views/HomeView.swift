@@ -30,7 +30,8 @@ struct HomeView: View {
                                                  
                                 NavigationLink(destination: ContentView()
                                     .onAppear(perform: {
-                                        model.beginModule(module.id)
+                                        model.getLessons(module: module, completion: {model.beginModule(module.id)})
+                                        
                                     }),
                                                tag: module.id.hash,
                                                selection: $model.currentContentSelected,
@@ -42,7 +43,9 @@ struct HomeView: View {
                                 
                                 NavigationLink(destination: TestView()
                                     .onAppear(perform: {
-                                        model.beginTest(module.id)
+                                        model.getQuestion(module: module) {
+                                            model.beginTest(module.id)
+                                        }
                                     }),
                                                tag: module.id.hash,
                                                selection: $model.currentTestSelected,

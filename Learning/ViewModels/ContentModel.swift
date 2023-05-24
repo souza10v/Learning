@@ -48,7 +48,7 @@ class ContentModel: ObservableObject {
     
     // MARK: - Data methods
     
-    func getLessons(module: Module) {
+    func getLessons(module: Module, completion: @escaping () -> Void) { //completion: @escaping () -> Void Usado para executar outro comenado somente quando este concluido
             
         // Specify path
         let collection = db.collection("modules").document(module.id).collection("lessons")
@@ -79,12 +79,69 @@ class ContentModel: ObservableObject {
                 }
                 
                 // Setting the lessons to the module
+                // modules.content.lessons = lessons // if the model was a class it would be possible do it. As it not this is the way:
                 
                 // Loop through publised modules array and find the one that matches the id of the copy that got passed in
+                for (index, m) in self.modules.enumerated() {
+                    
+                    //Find the module we want
+                    if m.id == module.id {
+                        
+                        // Set the lessons
+                        self.modules[index].content.lessons = lessonsInside
+                        
+                        // Call the completion closure
+                        completion()
+                    }
+                }
             }
         }
     }
     
+    func getQuestion(module: Module, completion: @escaping () -> Void) {
+        
+        // Specify path
+        let collection = db.collection("modules").document(module.id).collection("questions")
+        
+        // Get documents
+        collection.getDocuments { snapshot, error in
+            
+            if error == nil && snapshot != nil {
+                
+                // Array to track lessons
+                var questionsInside = [Question]()
+                
+                // Loop through the documents and build array of lessons
+                for doc in snapshot!.documents{
+                    
+                    // New lesson
+                    var q = Question()
+                    
+                    q.id = doc["id"] as? String ?? UUID().uuidString
+                    q.content = doc["content"] as? String ?? ""
+                    q.correctIndex = doc["correctIndex"] as? Int ?? 0
+                    q.answers = doc["answers"] as? [String] ?? [String]()
+                    
+                    // Add lesson to the array
+                    questionsInside.append(q)
+                    
+                }
+            
+                for (index, m) in self.modules.enumerated() {
+                    
+                    //Find the module we want
+                    if m.id == module.id {
+                        
+                        // Set the lessons
+                        self.modules[index].test.questions = questionsInside
+                        
+                        // Call the completion closure
+                        completion()
+                    }
+                }
+            }
+        }
+    }
     
     func getDatabaseModules() {
         
