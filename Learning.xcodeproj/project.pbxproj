@@ -23,6 +23,8 @@
 		C82652C52A005D0C00D81066 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C82652C42A005D0C00D81066 /* AVKit.framework */; };
 		C82652C72A005F2600D81066 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82652C62A005F2600D81066 /* Constants.swift */; };
 		C84B3FCB2A1D641000A40BEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C84B3FCA2A1D641000A40BEA /* GoogleService-Info.plist */; };
+		C8F961EE2A1FA93A00DC4C8E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F961ED2A1FA93A00DC4C8E /* LoginView.swift */; };
+		C8F961F02A1FA99200DC4C8E /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F961EF2A1FA99200DC4C8E /* LaunchView.swift */; };
 		C8FD6F902A016C210088ACFF /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FD6F8F2A016C210088ACFF /* CodeTextView.swift */; };
 		C8FD6F922A01A5410088ACFF /* RectangleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FD6F912A01A5410088ACFF /* RectangleCard.swift */; };
 		C8FD6F942A01C4020088ACFF /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FD6F932A01C4020088ACFF /* TestView.swift */; };
@@ -49,6 +51,8 @@
 		C82652C42A005D0C00D81066 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		C82652C62A005F2600D81066 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C84B3FCA2A1D641000A40BEA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C8F961ED2A1FA93A00DC4C8E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C8F961EF2A1FA99200DC4C8E /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		C8FD6F8F2A016C210088ACFF /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
 		C8FD6F912A01A5410088ACFF /* RectangleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCard.swift; sourceTree = "<group>"; };
 		C8FD6F932A01C4020088ACFF /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
@@ -123,15 +127,12 @@
 		C82652AE29FD7CD100D81066 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C82652A229FD7C4300D81066 /* HomeView.swift */,
-				C82652BB29FF3BE900D81066 /* HomeViewRow.swift */,
-				C82652BD2A0008F700D81066 /* ContentView.swift */,
-				C82652BF2A0019B800D81066 /* ContentViewRow.swift */,
-				C82652C12A00581F00D81066 /* ContentDetailView.swift */,
-				C8FD6F932A01C4020088ACFF /* TestView.swift */,
-				C8FD6F8F2A016C210088ACFF /* CodeTextView.swift */,
-				C8FD6F912A01A5410088ACFF /* RectangleCard.swift */,
-				C8FD6F952A03F1440088ACFF /* TestResultView.swift */,
+				C8F961EF2A1FA99200DC4C8E /* LaunchView.swift */,
+				C8F961EC2A1FA8CE00DC4C8E /* Common */,
+				C8F961EB2A1FA8B100DC4C8E /* Account */,
+				C8F961EA2A1FA8AA00DC4C8E /* Test */,
+				C8F961E92A1FA88D00DC4C8E /* Lesson */,
+				C8F961E82A1FA87D00DC4C8E /* Home */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,7 +159,6 @@
 				C82652B529FDC00800D81066 /* data.json */,
 				C8FD6FBD2A0736F00088ACFF /* data2tests.json */,
 				C82652B629FDC00800D81066 /* style.html */,
-				C82652C62A005F2600D81066 /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -166,6 +166,7 @@
 		C82652B229FD7CF500D81066 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C82652C62A005F2600D81066 /* Constants.swift */,
 				C84B3FCA2A1D641000A40BEA /* GoogleService-Info.plist */,
 			);
 			path = Helpers;
@@ -178,6 +179,51 @@
 				656D2A5E5E3C2B39A7E6CBD6 /* Pods_Learning.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C8F961E82A1FA87D00DC4C8E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C82652A229FD7C4300D81066 /* HomeView.swift */,
+				C82652BB29FF3BE900D81066 /* HomeViewRow.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C8F961E92A1FA88D00DC4C8E /* Lesson */ = {
+			isa = PBXGroup;
+			children = (
+				C82652BD2A0008F700D81066 /* ContentView.swift */,
+				C82652BF2A0019B800D81066 /* ContentViewRow.swift */,
+				C82652C12A00581F00D81066 /* ContentDetailView.swift */,
+			);
+			path = Lesson;
+			sourceTree = "<group>";
+		};
+		C8F961EA2A1FA8AA00DC4C8E /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				C8FD6F932A01C4020088ACFF /* TestView.swift */,
+				C8FD6F952A03F1440088ACFF /* TestResultView.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		C8F961EB2A1FA8B100DC4C8E /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				C8F961ED2A1FA93A00DC4C8E /* LoginView.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		C8F961EC2A1FA8CE00DC4C8E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C8FD6F912A01A5410088ACFF /* RectangleCard.swift */,
+				C8FD6F8F2A016C210088ACFF /* CodeTextView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8FD6F942A01C4020088ACFF /* TestView.swift in Sources */,
+				C8F961F02A1FA99200DC4C8E /* LaunchView.swift in Sources */,
 				C8FD6F962A03F1440088ACFF /* TestResultView.swift in Sources */,
 				C82652A329FD7C4300D81066 /* HomeView.swift in Sources */,
 				C82652BC29FF3BE900D81066 /* HomeViewRow.swift in Sources */,
@@ -306,6 +353,7 @@
 				C82652C22A00581F00D81066 /* ContentDetailView.swift in Sources */,
 				C82652A129FD7C4300D81066 /* LearningApp.swift in Sources */,
 				C82652C02A0019B800D81066 /* ContentViewRow.swift in Sources */,
+				C8F961EE2A1FA93A00DC4C8E /* LoginView.swift in Sources */,
 				C8FD6F902A016C210088ACFF /* CodeTextView.swift in Sources */,
 				C82652B429FD7DC100D81066 /* ContentModel.swift in Sources */,
 				C82652BA29FDC22100D81066 /* Models.swift in Sources */,
