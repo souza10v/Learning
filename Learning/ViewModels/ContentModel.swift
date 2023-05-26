@@ -448,7 +448,10 @@ class ContentModel: ObservableObject {
         // If not, reset the state
             currentQuestionIndex = 0
             currentQuestion = nil
-        }   
+        }
+        
+        // Save the progress
+        saveData()
     }
     
     // MARK: - Code Styling
