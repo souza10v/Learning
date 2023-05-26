@@ -40,7 +40,7 @@ struct LoginView: View {
                 .frame(maxWidth: 150)
             
             // Title
-            Text("Learnzilla")
+            Text("Learnzilla ")
             
             Spacer()
             
