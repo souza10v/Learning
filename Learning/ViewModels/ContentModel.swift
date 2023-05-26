@@ -59,6 +59,28 @@ class ContentModel: ObservableObject {
     
     // MARK: - Data methods
     
+    func saveData() {
+        
+        if let loggedInUser = Auth.auth().currentUser { // only if user is logged. only if loggedInUser is not nil
+            
+            // Save the progress data locally
+            let user = UserService.shared.user
+            
+            user.lastModule = currentModuleIndex
+            user.lastLesson = currentLessonIndex
+            user.lastQuestion = currentQuestionIndex
+            
+            // Save it to the database
+            let db = Firestore.firestore()
+            // let ref = db.collection("users").document(Auth.auth().currentUser!.uid) // one way
+            let ref = db.collection("users").document(loggedInUser.uid) // second way
+            ref.setData(["latModule": user.lastModule,
+                         "lastLesson": user.lastLesson,
+                         "latQuestion": user.lastQuestion], merge: true)
+            
+        }
+    }
+    
     func getUserData() {
         
         // Check that there`s a logged in user
@@ -381,8 +403,11 @@ class ContentModel: ObservableObject {
             currentLessonIndex = 0
             currentLesson = nil
         }
+        
+        // Save the progress
+        saveData()
+        
     }
-    
     
     func hasNextLesson() -> Bool {
        
