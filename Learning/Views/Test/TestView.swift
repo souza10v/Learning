@@ -13,12 +13,13 @@ struct TestView: View {
     @State var selectedAnswerIndex: Int?
     @State var submitted = false
     @State var numCorrect = 0
+    @State var showResults = false
     
     var body: some View {
         
         VStack {
             
-            if model.currentQuestion != nil {
+            if model.currentQuestion != nil && showResults == false {
                 
                 VStack {
                     
@@ -93,11 +94,24 @@ struct TestView: View {
                         
                         // Check if answer has been submitted
                         if submitted == true {
-                            model.nextQuestion()
                             
-                            // Reset properties
-                            submitted = false
-                            selectedAnswerIndex = nil
+                            if model.currentQuestionIndex + 1 == model.currentModule!.test.questions.count {
+                                
+                                // Chech next question and save the progress
+                                model.nextQuestion()
+                                
+                                showResults = true
+                                
+                            } else {
+                                
+                                // Answers has been submitted, move to next question
+                                model.nextQuestion()
+                                
+                                // Reset properties
+                                submitted = false
+                                selectedAnswerIndex = nil
+                            }
+                            
                             
                         } else {
                             // Check the answer and incremente the counter if corret
@@ -127,8 +141,10 @@ struct TestView: View {
                 }
                 .navigationBarTitle("\(model.currentModule?.category ?? "") Test")
             }
-            else {
+            else if showResults == true {
                 TestResultView(numCorrect: numCorrect)
+            } else {
+                ProgressView()
             }
         }
         .padding()

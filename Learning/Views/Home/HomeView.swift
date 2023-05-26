@@ -30,7 +30,7 @@ struct HomeView: View {
                                                  
                                 NavigationLink(destination: ContentView()
                                     .onAppear(perform: {
-                                        model.getLessons(module: module, completion: {model.beginModule(module.id)})
+                                        model.getLessons(module: module, completion: {model.beginModule(module.id)}) //when appear load first get lesson and when complete load begin module
                                         
                                     }),
                                                tag: module.id.hash,

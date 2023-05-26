@@ -57,6 +57,10 @@ struct ContentDetailView: View {
                 
                 Button {
                     
+                    // Call next lesson
+                    model.nextLesson()
+                    
+                    // Take the user back to the homeview
                     model.currentContentSelected = nil
                     
                 } label: {
