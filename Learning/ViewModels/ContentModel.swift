@@ -50,9 +50,41 @@ class ContentModel: ObservableObject {
         
         // Check if there`s a current user to determine logged in status
         loggedIn = Auth.auth().currentUser != nil ? true : false
+        
+        // Check if user meta data has been fetched. If the user was alread logged in from a previous sesson, we need to get their data a separate call
+        if UserService.shared.user.name == "" {
+            getUserData()
+        }
     }
     
     // MARK: - Data methods
+    
+    func getUserData() {
+        
+        // Check that there`s a logged in user
+        guard Auth.auth().currentUser != nil else {
+            return
+        }
+        
+        // Get the meta data for the user
+        let db = Firestore.firestore()
+        let ref = db.collection("users").document(Auth.auth().currentUser!.uid)
+        ref.getDocument { snapshot, error in
+            
+            // Check there`s no erros
+            guard error == nil, snapshot != nil else {
+                return
+            }
+            
+            // Parse the data out and set the user meta data
+            let data = snapshot!.data()
+            let user = UserService.shared.user
+            user.name = data?["name"] as? String ?? ""
+            user.lastModule = data?["lastModule"] as? Int ?? nil
+            user.lastLesson = data?["lastLesson"] as? Int ?? nil
+            user.lastQuestion = data?["lastQuestion"] as? Int ?? nil
+        }
+    }
     
     func getLessons(module: Module, completion: @escaping () -> Void) { //completion: @escaping () -> Void Usado para executar outro comenado somente quando este concluido
             

@@ -41,6 +41,9 @@ struct LaunchView: View {
                         }
                     }
             }
+            .onAppear {
+                model.getDatabaseData()
+            }
         }
     }
 }

@@ -31,6 +31,7 @@
 		C8FD6F942A01C4020088ACFF /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FD6F932A01C4020088ACFF /* TestView.swift */; };
 		C8FD6F962A03F1440088ACFF /* TestResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FD6F952A03F1440088ACFF /* TestResultView.swift */; };
 		C8FD6FBE2A0736F00088ACFF /* data2tests.json in Resources */ = {isa = PBXBuildFile; fileRef = C8FD6FBD2A0736F00088ACFF /* data2tests.json */; };
+		C8FF3E0A2A20388200EB686E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FF3E092A20388200EB686E /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		C8FD6F932A01C4020088ACFF /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		C8FD6F952A03F1440088ACFF /* TestResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultView.swift; sourceTree = "<group>"; };
 		C8FD6FBD2A0736F00088ACFF /* data2tests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data2tests.json; sourceTree = "<group>"; };
+		C8FF3E092A20388200EB686E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		F06ACA529AEC94FB0074BDA5 /* Pods-Learning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Learning.debug.xcconfig"; path = "Target Support Files/Pods-Learning/Pods-Learning.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +172,7 @@
 			children = (
 				C82652C62A005F2600D81066 /* Constants.swift */,
 				C84B3FCA2A1D641000A40BEA /* GoogleService-Info.plist */,
+				C8FF3E092A20388200EB686E /* UserService.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				C82652A329FD7C4300D81066 /* HomeView.swift in Sources */,
 				C82652BC29FF3BE900D81066 /* HomeViewRow.swift in Sources */,
 				C82652BE2A0008F700D81066 /* ContentView.swift in Sources */,
+				C8FF3E0A2A20388200EB686E /* UserService.swift in Sources */,
 				C82652C22A00581F00D81066 /* ContentDetailView.swift in Sources */,
 				C82652A129FD7C4300D81066 /* LearningApp.swift in Sources */,
 				C8F961F22A1FE18700DC4C8E /* ProfileView.swift in Sources */,
