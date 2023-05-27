@@ -14,7 +14,6 @@ struct RectangleCard: View {
     var body: some View {
         
         Rectangle()
-            .frame(height: 48)
             .foregroundColor(color)
             .cornerRadius(10)
             .shadow(radius: 5)

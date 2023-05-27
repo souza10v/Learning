@@ -373,8 +373,10 @@ class ContentModel: ObservableObject {
     
     func beginLesson(_ lessonIndex: Int) { // Seleciona dentro do modulo/nome a lesson atual
         
-        // Check the lessons index is with range of module lesson
+        // Reset the questionIndex since the user is starting lessons now
+        currentQuestionIndex = 0
         
+        // Check the lessons index is with range of module lesson
         if lessonIndex < currentModule!.content.lessons.count {
             currentLessonIndex = lessonIndex
         }
@@ -427,6 +429,9 @@ class ContentModel: ObservableObject {
         
         //Set the current question index
         currentQuestionIndex = 0
+        
+        // Reset the lessonIndex since the user is starting a test now
+        currentLessonIndex = 0
         
         // If there are questions, set the current question to the first one
         if currentModule?.test.questions.count ?? 0 > 0 {

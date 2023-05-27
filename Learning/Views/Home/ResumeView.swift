@@ -8,6 +8,24 @@
 import SwiftUI
 
 struct ResumeView: View {
+    
+    @EnvironmentObject var model:ContentModel
+    let user = UserService.shared.user
+    
+    var resumeTitle: String {
+        
+        let module = model.modules[user.lastModule ?? 0]
+        
+        if user.lastLesson != 0 {
+            // Resume a lesson
+            return "Learn \(module.category): Lesson \(user.lastLesson! + 1)"
+        }
+        else {
+            // Resume a test
+            return "\(module.category) Test: Question \(user.lastQuestion! + 1)"
+        }
+    }
+    
     var body: some View {
         
         ZStack{
@@ -18,12 +36,16 @@ struct ResumeView: View {
             HStack{
                 VStack(alignment: .leading){
                     Text("Continue where you let off:")
-                    Text("Learn Swift: What are the clousures")
+                    Text(resumeTitle)
+                        .bold()
                 }
                 Spacer()
                 Image("play")
-                    .frame(width:40, height: 40)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 40, height: 40)
             }
+            .padding()
         }
     }
 }
