@@ -41,7 +41,6 @@ class ContentModel: ObservableObject {
     @Published var currentTestSelected: Int?
     
     init() {
-        
     }
     
     // MARK: - Authentication methods
